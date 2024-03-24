@@ -4,6 +4,7 @@
   "description": "a text based game frame for farcaster",
   "main": "index.js",
   "scripts": {
+    "dev": "npx @airstack/frog dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +13,11 @@
     "farcaster"
   ],
   "author": "enderNakamoto",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@airstack/frog": "^0.0.7",
+    "dotenv": "^16.4.5",
+    "hono": "^4.1.3",
+    "react": "^18.2.0"
+  }
 }
