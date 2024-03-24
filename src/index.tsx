@@ -10,18 +10,13 @@ export const app = new Frog({
   apiKey: process.env.AIRSTACK_API_KEY as string,
 });
 
+// Frame to capture user's favorite fruit.
 app.frame('/', (c) => {
-    const { buttonValue, status } = c
     return c.res({
-      image
-  
-  : (
+        action: '/submit',
+      image: (
         <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
-          {status === 'initial' ? (
-            'Select your fruit!'
-          ) : (
-            `Selected: ${buttonValue}`
-          )}
+          Select your favorite fruit:
         </div>
       ),
       intents: [
@@ -29,6 +24,18 @@ app.frame('/', (c) => {
         <Button value="banana">Banana</Button>,
         <Button value="mango">Mango</Button>
       ]
+    })
+  })
+   
+  // Frame to display user's response.
+  app.frame('/submit', (c) => {
+    const { buttonValue } = c
+    return c.res({
+      image: (
+        <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
+          Selected: {buttonValue}
+        </div>
+      )
     })
   })
 
