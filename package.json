@@ -1,0 +1,16 @@
+{
+  "name": "castle_tokyo",
+  "version": "0.0.1",
+  "description": "a text based game frame for farcaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "frame",
+    "farcaster"
+  ],
+  "author": "enderNakamoto",
+  "license": "ISC"
+}
